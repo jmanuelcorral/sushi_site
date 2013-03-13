@@ -1,0 +1,31 @@
+﻿@using Sushi.Helpers.Enums
+@using Sushi.Helpers.Extensions
+@using Sushi.Helpers.LinkHelper
+@using Sushi.Helpers.NavigationHelper
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+    <body>
+            @(Html.Sushi().Menu().SetPosition(MenuPosition.FixedTop)
+            .AddNavigation(new Navigation("MainMenu")
+                                .AddLink(new Link().SetCaption("Home").SetAction("/home/index")))
+          )
+        <section id="main" style="padding-top:80px;">
+            @RenderBody()
+        </section>
+        <footer>
+        </footer>
+
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/modernizr")
+        @Scripts.Render("~/bundles/bootstrap")
+        @Scripts.Render("~/bundles/datatables")
+        @RenderSection("scripts", required: false)
+    </body>
+</html>
