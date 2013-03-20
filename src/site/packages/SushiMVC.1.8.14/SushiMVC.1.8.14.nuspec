@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>SushiMVC</id>
-    <version>1.8.10</version>
+    <version>1.8.14</version>
     <title>Sushi Library</title>
     <authors>jmanuelcorral</authors>
     <owners>jmanuelcorral</owners>
@@ -13,9 +13,9 @@
     <description>Sushi is a collection of MVC Helpers that prevent the spaguetti code in your razor views of your ASP.NET MVC 4 projects. Sushi is easy to use, it prevents to write lot of html and css code for you views using a simple syntax.
 
 Sushi uses BootStrap, that means the responsive and elegant user interface is guaranteed.</description>
-    <releaseNotes>Version 1.8.10
+    <releaseNotes>Version 1.8.14
 ----------------------
-Grid Improvements
+GridResponse Object for use in ModelBinding
 
 Available Helpers:
 ------------------------
@@ -32,7 +32,6 @@ Grid (experimental, alpha paging and filtering)
 For more information go to: 
 http://jmanuelcorral.github.com/Sushi/</releaseNotes>
     <copyright>José Manuel Corral</copyright>
-    <language />
     <tags>BootStrap, Sushi, HtmlHelpers, Html5, MVC, Control</tags>
     <dependencies>
       <dependency id="Twitter.Bootstrap" version="2.2.1" />
