@@ -13,10 +13,10 @@
 </head>
     <body>
             @(Html.Sushi().Menu().SetPosition(MenuPosition.FixedTop)
-            .AddNavigation(new Navigation("MainMenu").AddLink(new Link().SetCaption("About").SetAction("/home/index")))
+            .AddNavigation(new Navigation("MainMenu").AddLink(new Link().SetCaption("About").SetAction(Url.Content("~/home"))))
             .AddNavigationDropDown(new NavigationDropDown("btnMenu").SetCaption("Menu")
                                     .AddHeader("Navigation")
-                                    .AddLink(new Link().SetCaption("Creating Items"))
+                                    .AddLink(new Link().SetCaption("Creating Items").SetAction(Url.Content("~/menu")))
                                     .AddLink(new Link().SetCaption("Adding Links"))
                                     .AddLink(new Link().SetCaption("Adding Icons"))
                                     .AddSeparator()
