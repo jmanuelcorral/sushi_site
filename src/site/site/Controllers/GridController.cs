@@ -10,6 +10,11 @@ namespace site.Controllers
     {
         //
         // GET: /Grid/
+        public ActionResult Index()
+        {
+            return View(Models.MyRepository.GetPeople());
+        }
+
 
         public ActionResult ZeroConfig()
         {
