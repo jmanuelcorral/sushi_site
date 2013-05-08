@@ -22,16 +22,6 @@
 @using (Html.Sushi().BeginBlock(GridSize.span12))
 {
     <h2>Result</h2>
-    
-    try
-    {
-        @Html.Sushi().Grid(model => model).Bind()
-    }
-    catch(Exception ex)
-    {
-        @Html.Raw(ex.Message)
-    }
-    
 }
 </div>
 @section scripts
