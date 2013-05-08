@@ -12,7 +12,7 @@ namespace site.Controllers
         // GET: /Grid/
         public ActionResult Index()
         {
-            return View(Models.MyRepository.GetPeople());
+            return View(new List<Models.Person>());
         }
 
 
