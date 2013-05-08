@@ -1,8 +1,5 @@
 ﻿@using Sushi.Helpers.Extensions
-@using Sushi.Helpers.Gridhelper
 @using Sushi.Helpers.Enums
-@using Sushi.Helpers.LinkHelper
-
 
 <div id="content" class="hero-unit">
     <h1>Sushi</h1>
@@ -26,7 +23,6 @@
 </div>
 @section scripts
 {
-    @Html.Sushi().ScriptManager()
     <script type="text/javascript">
         $(document).ready(function () {
             $("#btnSnippets").click(function () {
