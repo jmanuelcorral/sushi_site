@@ -18,6 +18,12 @@ namespace site
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
+
+            routes.MapRoute(
+               name: "Grid",
+               url: "{controller}/{action}/{id}",
+               defaults: new { controller = "Grid", action = "ZeroConfig", id = UrlParameter.Optional }
+           );
         }
     }
 }
