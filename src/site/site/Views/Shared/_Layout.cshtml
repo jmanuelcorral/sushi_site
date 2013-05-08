@@ -45,7 +45,7 @@
                                     )
             .AddNavigationDropDown(new NavigationDropDown("Grid").SetCaption("Grid")
                                     .AddHeader("General")  
-                                    .AddLink(new Link().SetCaption("Zero Config"))
+                                    .AddLink(new Link().SetCaption("Zero Config").SetAction(@Url.Content("~/Grid/ZeroConfig")))
                                     .AddLink(new Link().SetCaption("Search"))
                                     .AddLink(new Link().SetCaption("Pagination"))
                                     .AddLink(new Link().SetCaption("Sorting"))
@@ -74,6 +74,7 @@
         @Scripts.Render("~/bundles/modernizr")
         @Scripts.Render("~/bundles/bootstrap")
         @Scripts.Render("~/bundles/datatables")
+        @Scripts.Render("~/bundles/sushi")
         @RenderSection("scripts", required: false)
     </body>
 </html>

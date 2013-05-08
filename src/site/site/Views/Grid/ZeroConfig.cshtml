@@ -1,0 +1,52 @@
+﻿@using Sushi.Helpers.Extensions
+@using Sushi.Helpers.Gridhelper
+@using Sushi.Helpers.Enums
+@using Sushi.Helpers.LinkHelper
+@model List<site.Models.Person>
+
+<div id="content" class="hero-unit">
+    <h1>Sushi</h1>
+    <h2>Zero Config Grid</h2>
+    <span>This is an example about a Zero-Configuration Grid</span>
+</div>
+
+<ul class="nav nav-tabs">
+    <li class="active" id="btnSnippets"><a href="#" >Code snippets</a></li>
+    <li id="btnResult"><a href="#" >Result</a></li>
+</ul>
+<div id="snippets" class="span12">
+    <h2>Snippets</h2>
+    <script src="https://gist.github.com/jmanuelcorral/5539445.js"></script>
+</div>
+<div id="result" style="display: none">
+@using (Html.Sushi().BeginBlock(GridSize.span12))
+{
+    <h2>Result</h2>
+    @(Html.Sushi()
+          .Grid(model => model).Bind()
+          .AddStyle(GridStyle.Default)
+          .AddStyle(GridStyle.Bordered)
+          .AddStyle(GridStyle.ZebraStripped)
+    )
+}
+</div>
+@section scripts
+{
+    @Html.Sushi().ScriptManager()
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#btnSnippets").click(function () {
+                $("#btnResult").removeClass("active");
+                $("#btnSnippets").addClass("active");
+                $("#snippets").css("display","block");
+                $("#result").css("display","none");
+            });
+            $("#btnResult").click(function () {
+                $("#btnResult").addClass("active");
+                $("#btnSnippets").removeClass("active");
+                $("#result").css("display", "block");
+                $("#snippets").css("display", "none");
+            });
+        });
+    </script>
+}
