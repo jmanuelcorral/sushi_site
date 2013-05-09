@@ -23,7 +23,7 @@
 <div id="result" style="display: none">
 @using (@Html.Sushi().BeginBlock(GridSize.span12))
 {
-    @Html.Sushi().Grid(model=>model)
+    @Html.Sushi().Grid(model=>model).AddStyle(GridStyle.Default).Bind()
 }
 </div>
 @section scripts
