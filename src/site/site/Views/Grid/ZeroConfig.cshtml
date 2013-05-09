@@ -21,15 +21,9 @@
     <script type="text/javascript" src="https://gist.github.com/jmanuelcorral/5539445.js"></script>
 </div>
 <div id="result" style="display: none">
-@using (Html.Sushi().BeginBlock(GridSize.span12))
+@for (int i = 0; i < Model.Count; i++)
 {
-    <h2>Result</h2>
-    @(Html.Sushi()
-          .Grid(model=>model).Bind()
-          .AddStyle(GridStyle.Default)
-          .AddStyle(GridStyle.Bordered)
-          .AddStyle(GridStyle.ZebraStripped)
-    )
+    @Html.Raw(Model[i].Name)
 }
 </div>
 @section scripts
