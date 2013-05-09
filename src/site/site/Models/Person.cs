@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Web;
 
@@ -20,6 +21,7 @@ namespace site.Models
         public static List<Person> GetPeople()
         {
             List<Person> peoplelist = new List<Person>();
+            System.Threading.Thread.CurrentThread.CurrentCulture = new CultureInfo("es-ES");
             peoplelist.Add(new Person()
                 {
                     Id = 1,

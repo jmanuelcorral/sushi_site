@@ -26,8 +26,8 @@ namespace site.Controllers
                 Name = "Jose Manuel",
                 FirstSurname = "La Mar",
                 SecondSurname = "De Majo",
-                BornDate = DateTime.Parse("20/09/1983 0:00:00"),
-                Register = DateTime.Parse("17/11/2012 14:06:38")
+                BornDate = DateTime.Now,
+                Register = DateTime.Now
             });
             peoplelist.Add(new Person()
             {
@@ -35,8 +35,8 @@ namespace site.Controllers
                 Name = "Cechu",
                 FirstSurname = "Pez",
                 SecondSurname = "Volador",
-                BornDate = DateTime.Parse("22/05/1982 0:00:00"),
-                Register = DateTime.Parse("17/10/2012 14:06:38")
+                BornDate = DateTime.Now,
+                Register = DateTime.Now
             });
 
             return View(peoplelist);
