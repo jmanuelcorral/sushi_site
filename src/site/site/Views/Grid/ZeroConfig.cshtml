@@ -3,7 +3,8 @@
 @using Sushi.Helpers.Enums
 @using Sushi.Helpers.LinkHelper
 @using System.Collections.Generic
-@model List<site.Models.Person>
+@using site.Models
+@model List<Person>
 
 <div id="content" class="hero-unit">
     <h1>Sushi</h1>
@@ -24,7 +25,7 @@
 {
     <h2>Result</h2>
     @(Html.Sushi()
-          .Grid(model => model).Bind()
+          .Grid(model=>model).Bind()
           .AddStyle(GridStyle.Default)
           .AddStyle(GridStyle.Bordered)
           .AddStyle(GridStyle.ZebraStripped)
