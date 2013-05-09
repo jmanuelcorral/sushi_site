@@ -19,17 +19,7 @@ namespace site.Controllers
 
         public ActionResult ZeroConfig()
         {
-            List<Person> pp = new List<Person>();
-            Person p = new Person();
-            p.Id = 5;
-            p.BornDate = DateTime.Now;
-            p.Name = "Jose";
-            p.FirstSurname = "Prueba";
-            p.SecondSurname = "Segunda";
-            p.Register = DateTime.Now;
-            pp.Add(p);
-            return View(pp);
-            //return View(Models.MyRepository.GetPeople());
+            return View(Models.MyRepository.GetPeople());
         }
 
         //
