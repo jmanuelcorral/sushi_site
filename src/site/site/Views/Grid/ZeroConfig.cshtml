@@ -4,7 +4,7 @@
 @using Sushi.Helpers.LinkHelper
 @using System.Collections.Generic
 @using site.Models
-@model List<String>
+@model List<Person>
 
 <div id="content" class="hero-unit">
     <h1>Sushi</h1>
@@ -23,7 +23,7 @@
 <div id="result" style="display: none">
 @for (int i = 0; i < Model.Count; i++)
 {
-    @Html.Raw(Model[i])
+    @Html.Raw(Model[i].Id)
 }
 </div>
 @section scripts

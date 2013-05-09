@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using site.Models;
 
 namespace site.Controllers
 {
@@ -18,10 +19,11 @@ namespace site.Controllers
 
         public ActionResult ZeroConfig()
         {
-            List<String> aa = new List<string>();
-            aa.Add("Prueba");
-            aa.Add("Prueba2");
-            return View(aa);
+            List<Person> pp = new List<Person>();
+            Person p = new Person();
+            p.Id = 5;
+            pp.Add(p);
+            return View(pp);
             //return View(Models.MyRepository.GetPeople());
         }
 
