@@ -18,7 +18,11 @@ namespace site.Controllers
 
         public ActionResult ZeroConfig()
         {
-            return View(Models.MyRepository.GetPeople());
+            List<String> aa = new List<string>();
+            aa.Add("Prueba");
+            aa.Add("Prueba2");
+            return View(aa);
+            //return View(Models.MyRepository.GetPeople());
         }
 
         //
