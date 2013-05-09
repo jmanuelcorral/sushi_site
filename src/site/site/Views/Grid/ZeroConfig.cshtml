@@ -21,9 +21,9 @@
     <script type="text/javascript" src="https://gist.github.com/jmanuelcorral/5539445.js"></script>
 </div>
 <div id="result" style="display: none">
-@for (int i = 0; i < Model.Count; i++)
+@using (@Html.Sushi().BeginBlock(GridSize.span12))
 {
-    @Html.Raw(Model[i].Id)
+    @Html.Sushi().Grid(model=>model)
 }
 </div>
 @section scripts
