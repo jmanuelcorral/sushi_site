@@ -7,8 +7,8 @@
 
 <div id="content" class="hero-unit">
     <h1>Sushi</h1>
-    <h2>Example Menu</h2>
-    <span>This is an example about a Simple Menu</span>
+    <h2>Menu Navigation</h2>
+    <span>An Explanation about menu and navigation Elements</span>
 </div>
 
 <ul class="nav nav-tabs">
@@ -18,11 +18,11 @@
 </ul>
 <div id="snippets" class="span12">
     <h2>Snippets</h2>
-    <script type="text/javascript" src="https://gist.github.com/jmanuelcorral/5540708.js"></script>
+    CODE SNIPPETS
 </div>
 <div id="positioning" class="span12" style="display:none">
     <h2>Menu Positioning</h2>
-    <script type="text/javascript" src="https://gist.github.com/jmanuelcorral/5547483.js"></script>
+    CODE SNIPPETS
 </div>
 <div id="result" style="display: none">
 @using (Html.Sushi().BeginBlock(GridSize.span12))
@@ -30,8 +30,10 @@
     <h2>Result</h2>
     @(Html.Sushi().Menu()
             .AddNavigation(new Navigation("Menu1")
-                .AddLink(new Link().SetCaption("Menu item 1").SetAction(@Url.Content("~/home")))
+                .AddLink(new Link().SetCaption("Menu item 1").SetAction(@Url.Content("~/menu/navigation")))
                 .AddLink(new Link().SetCaption("Menu item 2").SetAction("#"))
+                .AddSeparator()
+                .AddLink(new Link().SetCaption("Menu item 3").SetAction("#"))
             )
     )
 }

@@ -14,7 +14,10 @@ namespace site.Controllers
             return View();
         }
 
-
+        public ActionResult Navigation()
+        {
+            return View();
+        }
       
     }
 }
